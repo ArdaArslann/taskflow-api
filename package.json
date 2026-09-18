@@ -1,0 +1,27 @@
+{
+  "name": "task-management-api",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Node.js/Express Task (Gorev) Management REST API",
+  "main": "src/server.js",
+  "scripts": {
+    "start": "node src/server.js",
+    "dev": "nodemon src/server.js",
+    "test": "jest --runInBand",
+    "lint": "eslint src tests",
+    "format": "prettier --write .",
+    "postman:test": "newman run postman/TaskManagementAPI.postman_collection.json -e postman/TaskManagementAPI.postman_environment.json --reporters cli,htmlextra,json --reporter-htmlextra-export postman/report.html --reporter-json-export postman/report.json"
+  },
+  "dependencies": {
+    "express": "^4.19.2"
+  },
+  "devDependencies": {
+    "eslint": "^8.57.0",
+    "jest": "^29.7.0",
+    "newman": "^6.2.2",
+    "newman-reporter-htmlextra": "^1.23.1",
+    "nodemon": "^3.1.4",
+    "prettier": "^3.3.3",
+    "supertest": "^7.0.0"
+  }
+}
