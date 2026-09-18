@@ -40,6 +40,12 @@ docker compose exec api npm run postman:test
 docker compose down
 ```
 
+This generates `postman/report.html` and `postman/report.json`, both checked into this repo as
+test-run evidence. To view the HTML report interactively after cloning, just open
+`postman/report.html` directly in a browser (double-click it, or drag it into a browser tab) —
+it's a self-contained page, no server needed. It loads its styling/charts from a CDN, so an
+internet connection is required to see it fully styled.
+
 ## Project structure
 
 ```
