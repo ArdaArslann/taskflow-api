@@ -28,7 +28,7 @@ docker compose run --rm api npm run lint
 docker compose run --rm api npm run format
 ```
 
-## Postman collection & test-run evidence
+## API tests (Postman / Newman)
 
 A Postman collection (v2.1 schema) covering full CRUD, filtering/search, and the reporting
 endpoint — plus negative cases (400/404) — lives in `postman/`. Run the tests with Newman
@@ -40,8 +40,8 @@ docker compose exec api npm run postman:test
 docker compose down
 ```
 
-This generates `postman/report.html` and `postman/report.json`, both checked into this repo as
-test-run evidence. To view the HTML report interactively after cloning, just open
+This generates `postman/report.html` and `postman/report.json`, and a sample report from the
+latest run is included in the repo. To view the HTML report interactively after cloning, just open
 `postman/report.html` directly in a browser (double-click it, or drag it into a browser tab) —
 it's a self-contained page, no server needed. It loads its styling/charts from a CDN, so an
 internet connection is required to see it fully styled.
